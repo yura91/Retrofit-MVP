@@ -15,11 +15,11 @@ import registration.testing.firebase.com.retrofitmvp.Model.ForecastResponse;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class Intractor implements GetDataContract.Interactor {
+public class Interactor implements GetDataContract.Interactor {
     private GetDataContract.onGetDataListener mOnGetDatalistener;
     List<Forecast> forecasts = new ArrayList<>();
 
-    public Intractor(GetDataContract.onGetDataListener mOnGetDatalistener) {
+    public Interactor(GetDataContract.onGetDataListener mOnGetDatalistener) {
         this.mOnGetDatalistener = mOnGetDatalistener;
     }
 

@@ -8,16 +8,16 @@ import registration.testing.firebase.com.retrofitmvp.Model.Forecast;
 
 public class Presenter implements GetDataContract.Presenter, GetDataContract.onGetDataListener {
     private GetDataContract.View mGetDataView;
-    private Intractor mIntractor;
+    private Interactor mInteractor;
 
     public Presenter(GetDataContract.View mGetDataView) {
         this.mGetDataView = mGetDataView;
-        mIntractor = new Intractor(this);
+        mInteractor = new Interactor(this);
     }
 
     @Override
     public void getDataFromURL(Context context, String url) {
-        mIntractor.initRetrofitCall(context, url);
+        mInteractor.initRetrofitCall(context, url);
     }
 
     @Override
